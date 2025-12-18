@@ -1,9 +1,7 @@
-import random
 import tkinter as tk
 from tkinter import PhotoImage, ttk
 import customtkinter as ctk
 from PIL import Image, ImageTk
-from tkcalendar import DateEntry
 import pygame
 from PlanPage import *
 from ReportPage import *
