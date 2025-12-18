@@ -1,14 +1,11 @@
 import os
-import random
 import subprocess
 import sys
 import tkinter as tk
-from datetime import datetime
 from tkinter import PhotoImage, ttk
 import pygame
 import customtkinter as ctk
 from PIL import Image, ImageTk
-from tkcalendar import DateEntry
 
 
 # ------------------ Profile Page ------------------
@@ -32,6 +29,7 @@ class ProfilePage(tk.Frame):
     def play_sound(self):
         self.hamgaling.play()
 
+    # profile der page display
     def profile_display(self):
     #Display profile page
 
@@ -72,13 +70,13 @@ class ProfilePage(tk.Frame):
         self.profileName.pack(anchor="w",pady=6, padx=10)
 
         self.profileAge = tk.Label(
-           frame, text=f"{age}", bg="#FFFFFF", 
+           frame, text=f"Age : {age}", bg="#FFFFFF", 
             fg="#000000", font=("Roboto", 12)
         ) 
         self.profileAge.pack(anchor="w",pady=2, padx=10)
 
         self.profileGender = tk.Label(
-           frame, text=f"{gender}", bg="#FFFFFF", 
+           frame, text=f"Gender : {gender}", bg="#FFFFFF", 
             fg="#000000", font=("Roboto", 12)
         )
         self.profileGender.pack(anchor="w",pady=2, padx=10)
@@ -131,6 +129,7 @@ class ProfilePage(tk.Frame):
         ) 
         self.logout_but.pack(anchor="w", pady=5, padx=15)
 
+    #edit profile der function
     def profile_edit(self):
         #Hide the profile frame and navbar
         self.profile_main_area.pack_forget()
@@ -211,6 +210,7 @@ class ProfilePage(tk.Frame):
         self.save_btn = ctk.CTkButton(self.frame_2, text="Save", fg_color="#3838D5",hover_color="#6767FF", text_color="white", corner_radius=60,font=("Tahoma",14,"bold"), width=120, height=40, command=self.save_profile)
         self.save_btn.pack(pady=10)
 
+    #used to save the edited profile infomation
     def save_profile(self):
             # 1. Get Inputs
 
@@ -409,6 +409,7 @@ class ProfilePage(tk.Frame):
         popup.focus_set()
         popup.transient(self)
 
+    #log out function
     def logout(self):
         # Hide the current profile view and navbar
         self.profile_main_area.pack_forget()
