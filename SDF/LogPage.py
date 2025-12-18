@@ -1,12 +1,8 @@
-import random
 import tkinter as tk
 from datetime import datetime
 from tkinter import PhotoImage, ttk
 import pygame
 import customtkinter as ctk
-from PIL import Image, ImageTk
-from tkcalendar import DateEntry
-
 
 # ------------------ Log Page ------------------
 class LogPage(tk.Frame):
