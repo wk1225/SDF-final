@@ -425,14 +425,10 @@ class ProfilePage(tk.Frame):
         # Close the success pop-up
         popup.destroy()
         
-        # Get the executable and script path
         python_exe = sys.executable
-        # os.path.abspath ensures we get the full, correctly resolved path
         script_path = os.path.abspath(sys.argv[0]) 
-        
-        # Launch a new instance of the script using subprocess.Popen
-        # This correctly handles paths containing spaces.
         subprocess.Popen([python_exe, script_path] + sys.argv[1:])
         
         # Exit the current application cleanly
+
         self.master.quit()
