@@ -248,18 +248,18 @@ class App(tk.Tk):
         popup.title("Successful")
         popup.resizable(False, False)
 
-        width, height = 250, 120  # 弹窗大小
+        width, height = 250, 120
 
         def update_position():
             root_x = self.winfo_rootx()
             root_y = self.winfo_rooty()
             root_width = self.winfo_width()
             root_height = self.winfo_height()
-            # 计算居中位置
+
             x = root_x + (root_width - width) // 2
             y = root_y + (root_height - height) // 2
             popup.geometry(f"{width}x{height}+{x}+{y}")
-            # 如果弹窗还存在，50毫秒后再次更新
+            
             if popup.winfo_exists():
                 popup.after(1, update_position)
 
@@ -279,18 +279,18 @@ class App(tk.Tk):
         popup.resizable(False, False)
         self.play_sound_bruh()
 
-        width, height = 250, 150  # 弹窗大小
+        width, height = 250, 150
 
         def update_position():
             root_x = self.winfo_rootx()
             root_y = self.winfo_rooty()
             root_width = self.winfo_width()
             root_height = self.winfo_height()
-            # 计算居中位置
+            
             x = root_x + (root_width - width) // 2
             y = root_y + (root_height - height) // 2
             popup.geometry(f"{width}x{height}+{x}+{y}")
-            # 如果弹窗还存在，50毫秒后再次更新
+            
             if popup.winfo_exists():
                 popup.after(1, update_position)
 
@@ -339,5 +339,6 @@ class App(tk.Tk):
 
         self.main_frame.destroy()
         self.login_page()
+
 
 App().mainloop()
